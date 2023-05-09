@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TeoWorkout5</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!--Salutul-->
+    <div class="container">
+      <div id="salutid" class="slides slide1 align fontSize">
+        <ul>
+          <li><a href="#salutid">Salutul</a></li>
+          <li><a href="#ceasulid">Ceasul</a></li>
+          <li><a href="#varstaid">Varsta</a></li>
+          <li><a href="#formularid">Formular</a></li>
+        </ul>
+        <h4>Te rog introdu numele tau &#128516;</h4>
+        <form class="alignForm1">
+          <label for="salut">Nume:</label>
+          <input
+            type="text"
+            id="salut"
+            class="form1"
+            placeholder="Introdu numele tau"
+          />
+          <input type="button" id="btn" class="btn1" value="Enter" />
+        </form>
+        <p id="output1"></p>
+      </div>
+
+      <!--ceasul-->
+      <div id="ceasulid" class="slides slide2 align fontSize">
+        <p><b>Vezi ora exacta:</b></p>
+        <h1 id="time"></h1>
+      </div>
+
+      <!--Varsta-->
+      <div id="varstaid" class="slides slide3 align fontSize">
+        <p><b>Vezi ce varsta ai</b></p>
+        <div>
+          <label for="start">Selecteaza data ta de nastere:</label>
+          <input
+            class="padd"
+            type="date"
+            id="start"
+            name="trip-start"
+            value="1999-07-22"
+            min="1950-01-01"
+            max="2022-12-31"
+          />
+        </div>
+        <input
+          type="button"
+          class="btn1"
+          value="Calculate"
+          onclick="getAge()"
+        />
+        <p id="age"></p>
+      </div>
+
+      <!--formularul-->
+      <div id="formularid" class="slides slide4 align">
+        <div class="output" id="output2"></div>
+        <h1 id="forDeleteH1" class="forh1">Formular</h1>
+        <form id="forDelete">
+          <div class="alignForm1">
+            <label for="name">Nume:</label>
+            <input
+              type="text"
+              id="name"
+              class="form1"
+              placeholder="Introdu numele tau"
+            />
+          </div>
+          <div class="alignForm1">
+            <label for="fname">Prenume:</label>
+            <input
+              type="text"
+              id="fname"
+              class="form1"
+              placeholder="Introdu prenumele tau"
+            />
+          </div>
+          <div class="alignForm1">
+            <label for="city">Orasul tau:</label>
+            <select id="city" name="city">
+              <option value="Bucuresti">Bucuresti</option>
+              <option value="Sibiu">Sibiu</option>
+              <option value="Brasov">Brasov</option>
+            </select>
+          </div>
+          <div class="alignForm1 fieldset1">
+            <fieldset>
+              <legend>Iti plac dulciurile?</legend>
+              <input type="radio" id="yes" name="yes" value="yes" />
+              <label for="yes">Da</label>
+              <input type="radio" id="no" name="no" value="no" />
+              <label for="no">Nu</label>
+            </fieldset>
+          </div>
+          <div class="alignForm1 fieldset1">
+            <fieldset id="sectionForm" method="post">
+              <legend>Alege animalul preferat:</legend>
+              <div>
+                <input type="checkbox" id="cat" name="cat" />
+                <label for="cat">Pisica</label>
+              </div>
+              <div>
+                <input type="checkbox" id="dog" name="dog" />
+                <label for="dog">Caine</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="alignForm1">
+            <input type="button" id="btn2" class="btn1" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
