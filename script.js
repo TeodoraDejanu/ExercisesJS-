@@ -13,14 +13,14 @@ let x;
 let time;
 setInterval(() => {
   x = new Date();
-  if (x.getMinutes() < 10) {
-    time = x.getHours() + ":0" + x.getMinutes() + ":" + x.getSeconds();
+  if (x.getMinutes() < 10 && x.getSeconds() < 10) {
+    time = x.getHours() + ":0" + x.getMinutes() + ":0" + x.getSeconds();
     document.getElementById("time").innerHTML = time;
   } else if (x.getSeconds() < 10) {
     time = x.getHours() + ":" + x.getMinutes() + ":0" + x.getSeconds();
     document.getElementById("time").innerHTML = time;
-  } else if (x.getMinutes() < 10 && x.getSeconds() < 10) {
-    time = x.getHours() + ":0" + x.getMinutes() + ":0" + x.getSeconds();
+  } else if (x.getMinutes() < 10) {
+    time = x.getHours() + ":0" + x.getMinutes() + ":" + x.getSeconds();
     document.getElementById("time").innerHTML = time;
   } else {
     time = x.getHours() + ":" + x.getMinutes() + ":" + x.getSeconds();
